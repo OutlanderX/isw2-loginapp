@@ -1,6 +1,6 @@
 <project name="my.enterprise.project" default="build.my.war">
-<property name="deploy.dir" value="C:\Documentos\git\isw2-loginapp\build" />
-<property name="tomcat.dir" value="C:\Soft\Apache Software Foundation\Apache Tomcat 7.0.41\webapps" />
+<property name="deploy.dir" value="D:\Proyectos\isw2-loginapp\build" />
+<property name="tomcat.dir" value="D:\apache-tomcat-7.0.54\webapps" />
 
 <property name="file.name" value="LoginApp.war" />
   <target name="build.my.war">
@@ -16,4 +16,7 @@
   	<copy file="${file.name}" todir="${tomcat.dir}" />
     <delete file="${file.name}" />
   </target>
+	<junit>
+	  <test name="ulima.isw2.loginappTest.TestLoginServlet"/>
+	</junit>
 </project>
